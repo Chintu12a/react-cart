@@ -3,13 +3,13 @@ import Product from './Product'
 
 const Products = () => {
 
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('/api/products')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-        })
+      fetch('/api/products')
+      .then(response => response.json())
+      .then((data) => {
+          console.log(data);
+      })
     }, [])
 
     return (
